@@ -25,7 +25,7 @@
   <td id="projectalign">
    <div id="projectname">TouchScreenAdapter<span id="projectnumber">&#160;v0.5.0</span>
    </div>
-   <div id="projectbrief">A very thin adapter class to enable different touch libraries and protocols to have the same API.</div>
+   <div id="projectbrief">TouchScreenAdapter is a library providing a unified touchscreen API.</div>
   </td>
  </tr>
  </tbody>
@@ -64,9 +64,9 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title"><a class="el" href="classTouchScreenAdapter.html" title="A lightweight adapter abstract class for touch screen panels.">TouchScreenAdapter</a> </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_docs_apidocs"></a> A very thin adapter class to enable different touch libraries and protocols to have a consistent API and provide display X/Y coordinates even for resistive touch panels.</p>
-<p >Its primary use is for the [EventTouchScreen]() library but can also be used as a source for an <a href="https://lvgl.io/">LVGL</a> input device: <a href="https://docs.lvgl.io/master/details/main-components/indev.html">lv_indev_t</a>.</p>
-<p >The library provides a consistent TouchPoint structure (providing X, Y and Z) and an abstract <a class="el" href="classTouchScreenAdapter.html" title="A lightweight adapter abstract class for touch screen panels.">TouchScreenAdapter</a> class that specifies the following methods:</p>
+<div class="textblock"><p ><a class="anchor" id="md_docs_apidocs"></a> <a class="el" href="classTouchScreenAdapter.html" title="A lightweight adapter abstract class for touch screen panels.">TouchScreenAdapter</a> is a library providing a unified touchscreen API. Included are implementations for typical touchscreen types: 4-wire resistive and capacitive.</p>
+<p >Its primary use is for the <a href="https://github.com/Stutchbury/EventTouchScreen">EventTouchScreen</a> library (that will become part of <a href="https://github.com/Stutchbury/InputEvents">InputEvents</a>) but can also be used as a source for an <a href="https://lvgl.io/">LVGL</a> input device: <a href="https://docs.lvgl.io/master/details/main-components/indev.html">lv_indev_t</a>.</p>
+<p >The library provides a consistent TouchPoint structure, containing X &amp; Y display coordinates (even for resistive screens) and Z for touch/pressure. The abstract <a class="el" href="classTouchScreenAdapter.html" title="A lightweight adapter abstract class for touch screen panels.">TouchScreenAdapter</a> class specifies the following methods:</p>
 <ul>
 <li><code>void begin()</code> - required for Arduino compatibility.</li>
 <li><code><a class="el" href="structTouchScreenAdapter_1_1TouchPoint.html" title="A consistent struct containing points X &amp; Y plus Z as pressure.">TouchScreenAdapter::TouchPoint</a> getTouchPoint()</code> - returns a <a class="el" href="structTouchScreenAdapter_1_1TouchPoint.html" title="A consistent struct containing points X &amp; Y plus Z as pressure.">TouchScreenAdapter::TouchPoint</a> with X &amp; Y display coordinates with Z where 0 is not touched and &gt;= 1 is touched.</li>
@@ -75,13 +75,16 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <li><code>void setDisplayY(uint16_t height)</code> Set the display height. Required for resistive touch andor if reversing X or Y.</li>
 <li><code>void setRotation(uint8_t rotation)</code> Rotate the touch panel as required.</li>
 </ul>
-<p >Concrete implementations provide a constructor sutable for the underlying library and any additional methods required to configure the touch panel.</p>
+<p >Concrete implementations provide a constructor suitable for the underlying library and any additional methods required to configure the touch panel.</p>
 <p >Adapter classes are fairly trivial to create but must be 'header only' to allow Arduino IDE to compile without error when the underlying libraries are not installed.</p>
 <p >The concrete classes currently provided are:</p>
 <ul>
 <li><code><a class="el" href="classAdafruitResistiveTouchScreen.html" title="Concrete implementation of TouchScreenAdapter for Adafruit&#39;s resistive TouchScreen class.">AdafruitResistiveTouchScreen</a></code> - resistive, using Adafruit's <a href="https://github.com/adafruit/Adafruit_TouchScreen">TouchScreen</a> library.</li>
-<li><code><a class="el" href="classAdafruitFT6206TouchScreen.html" title="Concrete implementation of TouchScreenAdapter for Adafruit&#39;s FT6206 TouchScreen class.">AdafruitFT6206TouchScreen</a></code> - I2C, using Adafruit's <a href="https://github.com/adafruit/Adafruit_FT6206_Library">FT6206</a> library. </li>
+<li><code><a class="el" href="classAdafruitFT6206TouchScreen.html" title="Concrete implementation of TouchScreenAdapter for Adafruit&#39;s FT6206 TouchScreen class.">AdafruitFT6206TouchScreen</a></code> - I2C, using Adafruit's <a href="https://github.com/adafruit/Adafruit_FT6206_Library">FT6206</a> library.</li>
 </ul>
+<blockquote class="doxtable">
+<p >&zwj;Note: Although this library lists no dependencies, it is dependent on whichever underlying touch screen library is chosen. </p>
+</blockquote>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
