@@ -9,10 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -43,23 +39,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('AdafruitFT6206TouchScreen_8h_source.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">AdafruitFT6206TouchScreen.h</div></div>
 </div><!--header-->
@@ -84,13 +68,13 @@ $(document).ready(function(){initNavTree('AdafruitFT6206TouchScreen_8h_source.ht
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classAdafruitFT6206TouchScreen.html#a487abae8a9df291d7bed5ad53fc6aa4e">   42</a></span>    <a class="code hl_function" href="classAdafruitFT6206TouchScreen.html#a487abae8a9df291d7bed5ad53fc6aa4e">AdafruitFT6206TouchScreen</a>(uint8_t thresh = FT62XX_DEFAULT_THRESHOLD,</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>             TwoWire *theWire = &amp;Wire, uint8_t i2c_addr = FT62XX_DEFAULT_ADDR) { </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        _thresh = thresh;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        _wire = theWire;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        _i2c_addr = i2c_addr;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        this-&gt;thresh = thresh;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        this-&gt;wire = theWire;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        this-&gt;i2c_addr = i2c_addr;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classAdafruitFT6206TouchScreen.html#a0ef8473a9702bf52f3a4dbbfe0260d95">   55</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classAdafruitFT6206TouchScreen.html#a0ef8473a9702bf52f3a4dbbfe0260d95">begin</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> ctp.begin(_thresh, _wire, _i2c_addr);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> ctp.begin(thresh, wire, i2c_addr);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
@@ -117,9 +101,9 @@ $(document).ready(function(){initNavTree('AdafruitFT6206TouchScreen_8h_source.ht
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    Adafruit_FT6206 ctp = Adafruit_FT6206();</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    uint8_t _thresh = FT62XX_DEFAULT_THRESHOLD;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    TwoWire *_wire = &amp;Wire;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    uint8_t _i2c_addr = FT62XX_DEFAULT_ADDR;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    uint8_t thresh = FT62XX_DEFAULT_THRESHOLD;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    TwoWire *wire = &amp;Wire;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    uint8_t i2c_addr = FT62XX_DEFAULT_ADDR;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
@@ -134,7 +118,7 @@ $(document).ready(function(){initNavTree('AdafruitFT6206TouchScreen_8h_source.ht
 <div class="ttc" id="aclassAdafruitFT6206TouchScreen_html_a2b73c3ef8a06bf581aa1a77f211aecfe"><div class="ttname"><a href="classAdafruitFT6206TouchScreen.html#a2b73c3ef8a06bf581aa1a77f211aecfe">AdafruitFT6206TouchScreen::getTouchPoint</a></div><div class="ttdeci">TouchScreenAdapter::TouchPoint getTouchPoint()</div><div class="ttdoc">Get the Touch Point object.</div><div class="ttdef"><b>Definition:</b> AdafruitFT6206TouchScreen.h:65</div></div>
 <div class="ttc" id="aclassAdafruitFT6206TouchScreen_html_a487abae8a9df291d7bed5ad53fc6aa4e"><div class="ttname"><a href="classAdafruitFT6206TouchScreen.html#a487abae8a9df291d7bed5ad53fc6aa4e">AdafruitFT6206TouchScreen::AdafruitFT6206TouchScreen</a></div><div class="ttdeci">AdafruitFT6206TouchScreen(uint8_t thresh=FT62XX_DEFAULT_THRESHOLD, TwoWire *theWire=&amp;Wire, uint8_t i2c_addr=FT62XX_DEFAULT_ADDR)</div><div class="ttdoc">Construct a new AdafruitFT6206TouchScreen Adapter.</div><div class="ttdef"><b>Definition:</b> AdafruitFT6206TouchScreen.h:42</div></div>
 <div class="ttc" id="aclassAdafruitFT6206TouchScreen_html_a986adc0d2072c219ae49d73ad5220678"><div class="ttname"><a href="classAdafruitFT6206TouchScreen.html#a986adc0d2072c219ae49d73ad5220678">AdafruitFT6206TouchScreen::getTouchPointRaw</a></div><div class="ttdeci">TouchScreenAdapter::TouchPoint getTouchPointRaw()</div><div class="ttdoc">Get the raw TouchPoint struct containing X/Y values directly from the underlyig library.</div><div class="ttdef"><b>Definition:</b> AdafruitFT6206TouchScreen.h:86</div></div>
-<div class="ttc" id="aclassTouchScreenAdapter_html"><div class="ttname"><a href="classTouchScreenAdapter.html">TouchScreenAdapter</a></div><div class="ttdoc">A lightweight adapter abstract class for touch screen panels.</div><div class="ttdef"><b>Definition:</b> TouchScreenAdapter.h:19</div></div>
+<div class="ttc" id="aclassTouchScreenAdapter_html"><div class="ttname"><a href="classTouchScreenAdapter.html">TouchScreenAdapter</a></div><div class="ttdoc">A lightweight abstract Abstract class for touch screen panels.</div><div class="ttdef"><b>Definition:</b> TouchScreenAdapter.h:19</div></div>
 <div class="ttc" id="aclassTouchScreenAdapter_html_a2b98675b6ef6d172a6af6524c0451bde"><div class="ttname"><a href="classTouchScreenAdapter.html#a2b98675b6ef6d172a6af6524c0451bde">TouchScreenAdapter::displayHeight</a></div><div class="ttdeci">uint16_t displayHeight</div><div class="ttdoc">The (optionally rotated) height of the display in pixels.</div><div class="ttdef"><b>Definition:</b> TouchScreenAdapter.h:162</div></div>
 <div class="ttc" id="aclassTouchScreenAdapter_html_a46d5531973967c373039171efd562d29"><div class="ttname"><a href="classTouchScreenAdapter.html#a46d5531973967c373039171efd562d29">TouchScreenAdapter::displayWidth</a></div><div class="ttdeci">uint16_t displayWidth</div><div class="ttdoc">The (optionally rotated) width of the display in pixels.</div><div class="ttdef"><b>Definition:</b> TouchScreenAdapter.h:161</div></div>
 <div class="ttc" id="aclassTouchScreenAdapter_html_a46dcb4044e7f86eb823cc9139cce36bc"><div class="ttname"><a href="classTouchScreenAdapter.html#a46dcb4044e7f86eb823cc9139cce36bc">TouchScreenAdapter::rotation</a></div><div class="ttdeci">uint8_t rotation</div><div class="ttdoc">The current rotation of the touch panel. Default is 0 (native orientation).</div><div class="ttdef"><b>Definition:</b> TouchScreenAdapter.h:156</div></div>
@@ -143,13 +127,9 @@ $(document).ready(function(){initNavTree('AdafruitFT6206TouchScreen_8h_source.ht
 <div class="ttc" id="astructTouchScreenAdapter_1_1TouchPoint_html_a908e0295141a13890853c8f0433f10b5"><div class="ttname"><a href="structTouchScreenAdapter_1_1TouchPoint.html#a908e0295141a13890853c8f0433f10b5">TouchScreenAdapter::TouchPoint::y</a></div><div class="ttdeci">uint16_t y</div><div class="ttdoc">Mapped 0 to screen height -1.</div><div class="ttdef"><b>Definition:</b> TouchScreenAdapter.h:48</div></div>
 <div class="ttc" id="astructTouchScreenAdapter_1_1TouchPoint_html_a9b44bef94981288a2c30f1d9580013f6"><div class="ttname"><a href="structTouchScreenAdapter_1_1TouchPoint.html#a9b44bef94981288a2c30f1d9580013f6">TouchScreenAdapter::TouchPoint::z</a></div><div class="ttdeci">uint16_t z</div><div class="ttdoc">Mapped 0-255 representing pressure (0 = not touched). is uint16_t because raw is odten &gt; 255.</div><div class="ttdef"><b>Definition:</b> TouchScreenAdapter.h:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><b>AdafruitFT6206TouchScreen.h</b></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
 </body>
 </html>

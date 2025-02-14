@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classTouchScreenAdapter.html" title="A lightweight adapter abstract class for touch screen panels." alt="" coords="5,31,148,57"/>
+<area shape="rect" id="node1" href="$classTouchScreenAdapter.html" title="A lightweight abstract Abstract class for touch screen panels." alt="" coords="5,31,148,57"/>
 <area shape="rect" id="node2" href="$classAdafruitFT6206TouchScreen.html" title="Concrete implementation of TouchScreenAdapter for Adafruit&#39;s FT6206 TouchScreen class." alt="" coords="202,5,389,32"/>
 <area shape="rect" id="node3" href="$classAdafruitResistiveTouchScreen.html" title="Concrete implementation of TouchScreenAdapter for Adafruit&#39;s resistive TouchScreen class." alt="" coords="196,56,395,83"/>
 </map>

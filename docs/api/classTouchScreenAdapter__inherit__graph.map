@@ -1,5 +1,5 @@
 <map id="TouchScreenAdapter" name="TouchScreenAdapter">
-<area shape="rect" id="node1" title="A lightweight adapter abstract class for touch screen panels." alt="" coords="135,5,278,32"/>
+<area shape="rect" id="node1" title="A lightweight abstract Abstract class for touch screen panels." alt="" coords="135,5,278,32"/>
 <area shape="rect" id="node2" href="$classAdafruitFT6206TouchScreen.html" title="Concrete implementation of TouchScreenAdapter for Adafruit&#39;s FT6206 TouchScreen class." alt="" coords="5,80,192,107"/>
 <area shape="rect" id="node3" href="$classAdafruitResistiveTouchScreen.html" title="Concrete implementation of TouchScreenAdapter for Adafruit&#39;s resistive TouchScreen class." alt="" coords="217,80,415,107"/>
 </map>
